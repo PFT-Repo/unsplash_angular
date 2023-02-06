@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../app/environments/environment';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UnsplashService {
-  apiKey = process.env['UNSPLASH_API_KEY']? process.env['UNSPLASH_API_KEY'] : environment.unsplash.UNSPLASH_API_KEY;
+  apiKey = environment.UNSPLASH_API_KEY;
   baseUrl = 'https://api.unsplash.com';
   images!: any[];
 
