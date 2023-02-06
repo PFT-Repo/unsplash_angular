@@ -6,7 +6,7 @@ import { environment } from '../../app/environments/environment';
   providedIn: 'root'
 })
 export class UnsplashService {
-  apiKey = environment.unsplash.UNSPLASH_API_KEY;
+  apiKey = process.env['UNSPLASH_API_KEY']? process.env['UNSPLASH_API_KEY'] : environment.unsplash.UNSPLASH_API_KEY;
   baseUrl = 'https://api.unsplash.com';
   images!: any[];
 
