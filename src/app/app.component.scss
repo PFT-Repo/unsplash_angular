@@ -15,3 +15,77 @@
 .masonry-item {
     margin: 5px;
 }
+.container-fluid{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-around;
+    /* Your container needs a fixed height, and it 
+     * needs to be taller than your tallest column. */
+    max-height: 2500px;
+  }
+  
+  .item {
+    width: 30%;
+    /* Optional */
+    margin: 1%;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  
+  /* Re-order items into 3 rows */
+  .item:nth-child(3n+1) { order: 1; }
+  .item:nth-child(3n+2) { order: 2; }
+  .item:nth-child(3n)   { order: 3; }
+  
+  /* Force new columns */
+  .container::before,
+  .container::after {
+    content: "";
+    flex-basis: 100%;
+    width: 0;
+    order: 2;
+  }
+  @media screen and (max-width:425px){
+    .container-fluid{
+        max-height: 100%;
+      }
+    .item {
+        width: 100%;
+    }
+  }
+  @media only screen and (min-width: 426px) and (max-width: 767px){
+    .container-fluid{
+        max-height: 100%;
+      }
+    .item {
+        width: 100%;
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px){
+    .container-fluid{
+        max-height: 4000px;
+      }
+    .item {
+        width: 50%;
+    }
+    
+  }
+  @media only screen and (min-width: 1024px){
+    .container-fluid{
+        max-height: 2000px;
+      }
+    .item {
+        width: 30%;
+    }
+    
+  }
+  @media only screen and (min-width: 1400px){
+    .container-fluid{
+        max-height: 2300px;
+      }
+    .item {
+        width: 30%;
+    }
+    
+  }

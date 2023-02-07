@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
+import { data } from '../offline';
 
 @Injectable({
   providedIn: 'root'
@@ -17,8 +18,8 @@ export class UnsplashService {
     );
   }
   private getList(any: any) {
-   
-    this.images =  any;
+
+    this.images = any;
 
   }
 }

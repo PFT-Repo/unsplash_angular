@@ -1,9 +1,8 @@
-<div class="container-fluid">
+<div class="container">
   <button class="btn boton w-100 p-3 my-2" (click)="getPhotos()">Cargar nuevas fotos</button>
-  <div *ngIf="images.length>1" class="row mx-auto">
-    <ngx-masonry>
-      <div ngxMasonryItem *ngFor="let i of images" class="masonry-item">
-        <app-card-item [src]="i.urls.small" [title]="i.alt_description" [subTitle]="i.user.username"></app-card-item>
+  <div *ngIf="images.length >1" class="row mx-auto">
+      <div class="container-fluid">
+          <app-card-item *ngFor="let i of images" class="item" [src]="i.urls.small" [title]="i.alt_description" [subTitle]="i.user.username"/>
       </div>
-    </ngx-masonry>
+    </div>
   </div>
