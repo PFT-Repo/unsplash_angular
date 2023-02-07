@@ -20,7 +20,7 @@ Decidí dejarme llevar por el diseño propuesto en el reto, utilizando la misma 
 
 Esta app corre directamente en el app-component ( que es el componente por defecto de las SPA de Angular ) donde encontrarán un botón y para las imagenes generé un componente llamado card-item donde se van a cargar las imagenes.
 
-Para realizar el grid Masonry he dado uso a una libreria extrerna llamada: <a href="https://www.npmjs.com/package/ngx-masonry">ngx-masonry</a> que viene a ser un modulo de Angular basado en <a href="https://github.com/desandro/masonry"> la libreria de Masonry del desarrollador Desandro </a>
+Para realizar el grid Masonry he dado uso a una libreria extrerna llamada: <a href="https://masonry.desandro.com/">  Masonry </a> del desarrollador Desandro 
 
 ## Unsplash Service
 
